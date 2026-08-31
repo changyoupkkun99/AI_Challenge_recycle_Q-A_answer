@@ -9,7 +9,7 @@
 * **최종 정확도(Accuracy):** **0.93732**
 * **참가자:** 대전_6반_이창엽
 <img width="1522" height="549" alt="성과_나" src="https://github.com/user-attachments/assets/6517033d-eec5-458e-8c42-b6e421d1da74" />
-인원
+* **인원:**
 <img width="1249" height="299" alt="성과_인원" src="https://github.com/user-attachments/assets/7ffac96c-bc48-47b5-95e5-018d25d8766b" />
 
 
