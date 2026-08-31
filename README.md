@@ -1,66 +1,79 @@
 # ♻️ 삼성교육 16기 AI Challenge: 재활용품 이미지 기반 질의응답 모델 개발
 
 > **"이미지로 묻고, AI로 답하다 ㅡ 이미지 기반 질의응답 모델 개발 AI 챌린지"**
-> 
 > 삼성교육 16기 1회차 AI 챌린지 참가 프로젝트입니다.
 
----
+## 🏆 프로젝트 성과
 
-## 📖 Overview
+* **최종 순위:** 전체 954명 중 **22위** 달성
+* **최종 정확도(Accuracy):** **0.93732**
+* **참가자:** 대전_6반_이창엽
 
-이미지 속 세상을 '읽고, 이해하고, 답하는' 인공지능인 **VQA(Visual Question Answering)** 모델은 인간의 시각적 사고에 가장 가까운 형태의 AI 기술입니다. 본 프로젝트는 재활용품 이미지 데이터를 활용하여 VQA 모델을 개발하고, 이를 통해 다양한 질문에 정확하게 답변할 수 있는 시스템을 구축하는 것을 목표로 합니다.
-
-### 💡 VQA 모델이 필요한 이유
-
-*   **시각 정보 해석 능력의 확장:** "이 이미지에 뭐가 있지?", "이 장면은 어디일까?" 같은 질문에 스스로 답하며 단순 인식에서 '이해'로 나아갑니다.
-*   **실제 서비스에 적용 가능한 기술:**
-    *   **스마트 팩토리:** 영상 데이터 기반 품질 이상 탐지 및 설명
-    *   **의료 영상 분석:** 진단 보조를 위한 시각적 질의응답
-    *   **자율주행 및 CCTV:** 상황 인식 및 위험 설명
-    *   **교육 및 접근성 분야:** 시각장애인을 위한 이미지 설명 AI 등
-*   **AI 혁신의 교차점, 멀티모달 러닝:** ChatGPT, Gemini, Claude 등 최신 멀티모달 모델의 핵심 구조인 이미지와 자연어의 동시 처리 원리를 구현합니다.
+---<img width="1249" height="299" alt="성과_인원" src="https://github.com/user-attachments/assets/7ffac96c-bc48-47b5-95e5-018d25d8766b" />
+<img width="1522" height="549" alt="성과_나" src="https://github.com/user-attachments/assets/6517033d-eec5-458e-8c42-b6e421d1da74" />
 
 ---
 
-## 🎯 대회 미션 및 데이터셋
+## 📖 대회 개요
 
-*   **주제:** 재활용품 이미지 기반 질의응답 모델 개발
-*   **목표:** 주어진 이미지와 자연어 질문을 입력받아 정답을 `a, b, c, d` 중 하나로 선택 (4지선다형)
-*   **데이터셋:** 데이터 수집 미션으로 수집된 이미지 중 일부를 퀴즈 형태로 가공한 Question-Answering 쌍 데이터
-*   **예시:**
-    *   **질문:** 바구니 속에 든 재활용품은 어떤 소재인가요?
-    *   **선지:** a.캔 b.병 c.플라스틱 d.비닐
-    *   **정답:** c
+이미지 속 세상을 '읽고, 이해하고, 답하는' 인공지능인 **VQA(Visual Question Answering)** 모델은 인간의 시각적 사고에 가장 가까운 형태의 AI 기술입니다. 본 프로젝트는 재활용품 이미지 데이터를 활용하여 VQA 모델을 개발하고, 주어진 이미지와 자연어 질문을 바탕으로 4지선다(a, b, c, d) 중 알맞은 정답을 추론하는 시스템을 구축했습니다.
 
----
 
-## ⚙️ 개발 프로세스
 
-본 저장소의 코드(`baseline_desktop_final.ipynb`)는 다음의 파이프라인을 포함하고 있습니다.
+## 🤖 모델 선정
 
-1.  **환경 세팅 (Environment Setup):** 최신 VLM 구동을 위한 PyTorch 및 필수 라이브러리 설정
-2.  **데이터 준비 (Data Preparation):** Train/Test 데이터 로드 및 전처리
-3.  **모델 학습 (Model Training):**
-    *   **Model:** `Qwen2.5-VL-7B-Instruct`
-    *   **Technique:** PEFT(LoRA) 파라미터 효율적 튜닝, 양자화(Quantization) 기반 메모리 최적화
-4.  **추론 (Inference):** TTA(Test Time Augmentation) 적용 및 각 모델의 예측 확률(npy) 추출
-5.  **스마트 라우팅 앙상블 (Smart Routing Ensemble):**
-    *   단일 모델의 한계를 극복하기 위해 다중 모델 확률값을 Soft Voting 방식으로 결합
-    *   고성능 모델(예: 27B)의 확신도(Confidence)를 기반으로 한 조건부 라우팅 규칙(Golden Rule) 적용
+본 대회에서는 탁월한 한국어 이해 능력과 이미지 인식 성능을 갖춘 **Qwen-VL 시리즈**를 핵심 모델로 선정했습니다.
+
+* **Qwen2.5-VL-7B-Instruct:** 로컬 GPU(RTX 5060 Ti) 환경에서 LoRA 파인튜닝을 적용하기 가장 적합한 크기와 성능의 밸런스를 갖춘 주력 모델로 활용했습니다.
+* **Qwen3.5-27B:** 압도적인 제로샷 성능을 활용하여, 파인튜닝된 7B 모델이 헷갈려하는 고난도 문항을 방어하는 '전문가(Expert) 모델'로 앙상블에 활용했습니다.
 
 ---
 
-## 🏆 Evaluation
+## 🛠️ 기술 스택 및 라이브러리
 
-평가 기준은 다음과 같습니다.
+* **Language:** Python
+* **Framework:** PyTorch (v2.11.0, CUDA 12.8)
+* **AI/ML Libraries:**
+* `transformers` (HuggingFace 최신 아키텍처 로드)
+* `peft` (LoRA 파인튜닝)
+* `accelerate`, `bitsandbytes` (메모리 최적화 및 양자화)
+* `qwen-vl-utils` (이미지 프로세싱)
 
-*   **Accuracy (정확도):** 모델의 정답 예측 비율
-*   **재현성:** 데이터셋에 대한 일관된 성능 유지
-*   **효율성:** 모델 파이프라인 및 추론 성능
-*   **리더보드 점수:** 실시간 랭킹 기록
-*   **추가 점수:** 우수 Discussion 작성 및 반별 프로젝트 발표
+
+* **Data Processing:** `pandas`, `numpy`, `Pillow`, `tqdm`
+* **Hardware:** Windows Desktop, NVIDIA RTX 5060 Ti
 
 ---
+
+## 🚀 성능 향상을 위한 핵심 전략
+
+* **프롬프트 엔지니어링 (Prompt Engineering):** 모델이 질문과 선지를 명확히 구분할 수 있도록 프롬프트를 완전한 한국어 지시문으로 구조화하고, 출력 형식을 강제하는 강력한 System Prompt를 적용했습니다.
+* **메모리 최적화 파인튜닝 (PEFT/LoRA):** 제한된 VRAM 환경에서 7B 모델을 학습시키기 위해 LoRA 기법을 적용했습니다. 타겟 모듈만 효율적으로 학습시키고, `torch.bfloat16` 데이터 타입과 Gradient Checkpointing으로 OOM을 방지했습니다.
+* **추론 최적화 (Test Time Augmentation, TTA):** 객관식 선지 순서에 따른 모델의 편향을 줄이기 위해, 선지 순서를 4번 순환하여 예측 확률을 구한 뒤 평균을 내는 방식을 적용했습니다.
+* **고도화된 앙상블 (Smart Routing Ensemble):**
+* **Soft Voting:** 다양한 조건으로 학습된 모델들의 로짓(Logits)을 Softmax로 변환 후 최적의 가중치로 결합했습니다.
+* **Confidence-Gated Routing:** 베이스 앙상블 모델의 확신도가 `0.70` 이하로 낮을 때, 대형 모델(27B)이 `0.85` 이상의 강한 확신을 보인다면 정답을 대형 모델의 예측값으로 교체하는 자체 스마트 라우팅 로직을 구현하여 정확도를 극대화했습니다.
+
+
+
+---
+
+## ⚙️ 실행 방법
+
+### 1. 환경 설정
+
+`requirements.txt`를 기반으로 필수 패키지를 설치합니다.
 
 ```bash
 pip install -r requirements.txt
+
+```
+
+### 2. 프로젝트 파이프라인
+
+제공된 주피터 노트북 파일(`baseline_desktop_final.ipynb`)을 순차적으로 실행합니다.
+
+1. **데이터 준비 및 모델 초기화:** 데이터셋 로드 및 `Qwen2.5-VL-7B-Instruct` 준비
+2. **모델 학습 (Fine-Tuning):** LoRA 기반 파라미터 효율적 튜닝 진행
+3. **검증 및 추론 (Inference):** TTA를 적용하여 단일 모델 결과 `.npy` 및 `submission.csv` 추출
+4. **스마트 라우팅 앙상블 (Ensemble):** 다중 모델 확률값 Soft Voting 및 확신도 기반 라우팅 적용하여 최종 제출 파일 생성
