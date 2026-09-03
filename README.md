@@ -20,14 +20,10 @@
 
 <br>
 
-<div align="center">![Uploading 성과_인원.png…]()
-
+<div align="center">
   <img width="1243" height="671" alt="최종 순위 및 점수" src="https://github.com/user-attachments/assets/2431e65a-2269-4c76-b162-56ee8362b61b" />
-
   <br><br>
   <img width="80%" alt="성과_인원" src="https://github.com/user-attachments/assets/a3ee3781-9663-47b5-9df4-68563636811f" />
-  <"src="https://github.com/user-attachments/assets/9c93fdb5-ed3c-4729-8281-ede4c7f2e15b"  alt="전체 참가 인원" width="80%">
-  <img src="https://github.com/user-attachments/assets/7ffac96c-bc48-47b5-95e5-018d25d8766b" alt="전체 참가 인원" width="80%">
 </div>
 
 ## 📖 대회 개요
