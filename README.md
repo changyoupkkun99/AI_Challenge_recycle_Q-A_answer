@@ -1,4 +1,5 @@
 
+
 # ♻️ 삼성교육 16기 AI Challenge: 재활용품 이미지 기반 질의응답 모델 개발
 
 > **"이미지로 묻고, AI로 답하다 ㅡ 이미지 기반 질의응답 모델 개발 AI 챌린지"**
@@ -17,11 +18,10 @@
 <br>
 
 <div align="center">
-  <img width="1243" height="671" alt="성과_나" src="https://github.com/user-attachments/assets/f76feb86-1ae2-4f24-8d87-a5cfdb371cfe" "alt="최종 순위 및 점수" width="100%"><img width="1352" height="703" alt="성과_인원" src="https://github.com/user-attachments/assets/69a68d02-6ecd-45cf-9cac-8afdc0c378af" />
+  <img width="1243" height="671" alt="성과_나" src="https://github.com/user-attachments/assets/f76feb86-1ae2-4f24-8d87-a5cfdb371cfe" "alt="최종 순위 및 점수" width="100%">
 
   <br><br>
-  ![Uploading 성과_인원.png…]()
-
+  <img width="1352" height="703" alt="성과_인원" src="https://github.com/user-attachments/assets/9c93fdb5-ed3c-4729-8281-ede4c7f2e15b" />
   <img src="https://github.com/user-attachments/assets/7ffac96c-bc48-47b5-95e5-018d25d8766b" alt="전체 참가 인원" width="80%">
 </div>
 
