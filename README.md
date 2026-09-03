@@ -18,7 +18,7 @@
 <br>
 
 <div align="center">
-  <" src="https://github.com/user-attachments/assets/f76feb86-1ae2-4f24-8d87-a5cfdb371cfe" alt="최종 순위 및 점수" width="100%">
+  <img src="src="https://github.com/user-attachments/assets/f76feb86-1ae2-4f24-8d87-a5cfdb371cfe" alt="최종 순위 및 점수" width="100%">
 
   <br><br>
   <"src="https://github.com/user-attachments/assets/9c93fdb5-ed3c-4729-8281-ede4c7f2e15b"  alt="전체 참가 인원" width="80%">
