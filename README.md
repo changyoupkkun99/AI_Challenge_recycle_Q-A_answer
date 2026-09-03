@@ -1,4 +1,6 @@
-<src="https://github.com/user-attachments/assets/c237c6a4-7d28-4196-99de-818d1b45f1a4" />
+
+
+
 
 
 # ♻️ 삼성교육 16기 AI Challenge: 재활용품 이미지 기반 질의응답 모델 개발
@@ -18,10 +20,12 @@
 
 <br>
 
-<div align="center">
-  <img src="src="https://github.com/user-attachments/assets/f76feb86-1ae2-4f24-8d87-a5cfdb371cfe" alt="최종 순위 및 점수" width="100%">
+<div align="center">![Uploading 성과_인원.png…]()
+
+  <img width="1243" height="671" alt="최종 순위 및 점수" src="https://github.com/user-attachments/assets/2431e65a-2269-4c76-b162-56ee8362b61b" />
 
   <br><br>
+  <img width="80%" alt="성과_인원" src="https://github.com/user-attachments/assets/a3ee3781-9663-47b5-9df4-68563636811f" />
   <"src="https://github.com/user-attachments/assets/9c93fdb5-ed3c-4729-8281-ede4c7f2e15b"  alt="전체 참가 인원" width="80%">
   <img src="https://github.com/user-attachments/assets/7ffac96c-bc48-47b5-95e5-018d25d8766b" alt="전체 참가 인원" width="80%">
 </div>
