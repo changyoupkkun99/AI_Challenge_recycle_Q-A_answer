@@ -1,8 +1,4 @@
 
-
-
-
-
 # ♻️ 삼성교육 16기 AI Challenge: 재활용품 이미지 기반 질의응답 모델 개발
 
 > **"이미지로 묻고, AI로 답하다 ㅡ 이미지 기반 질의응답 모델 개발 AI 챌린지"**
@@ -11,15 +7,10 @@
 ## 🏆 프로젝트 성과
 
 * **최종 순위:** 전체 954명 중 **16위** 달성
-* **최종 정확도(Accuracy):** **0.93732**
-* **참가자:** 대전_6반_이창엽
-* ## 🏆 프로젝트 성과
-* **최종 순위:** 전체 954명 중 **22위** 달성
-* **최종 정확도(Accuracy):** **0.93732**
+* **최종 정확도(Accuracy):** **0.93929**
 * **참가자:** 대전_6반_이창엽
 
 <br>
-
 <div align="center">
   <img width="1243" height="671" alt="최종 순위 및 점수" src="https://github.com/user-attachments/assets/2431e65a-2269-4c76-b162-56ee8362b61b" />
   <br><br>
@@ -53,7 +44,7 @@
 
 
 * **Data Processing:** `pandas`, `numpy`, `Pillow`, `tqdm`
-* **Hardware:** Windows Desktop, NVIDIA RTX 5060 Ti
+* **Hardware:** Colab, A100
 
 ---
 
