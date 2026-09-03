@@ -1,3 +1,4 @@
+<src="https://github.com/user-attachments/assets/c237c6a4-7d28-4196-99de-818d1b45f1a4" />
 
 
 # ♻️ 삼성교육 16기 AI Challenge: 재활용품 이미지 기반 질의응답 모델 개발
